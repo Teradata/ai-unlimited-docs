@@ -34,13 +34,14 @@ const config = {
       attributes: {
         'http-equiv': 'Content-Security-Policy',
         content:
-          "default-src 'self' 'unsafe-inline' 'unsafe-eval' data: https://avatars.githubusercontent.com https://github.com https://kit.fontawesome.com/ https://ka-f.fontawesome.com/ https://fonts.googleapis.com/ https://fonts.gstatic.com/ https://www.google-analytics.com/ https://www.googletagmanager.com/ https://*.algolia.net/;",
+          "default-src 'self' 'unsafe-inline' 'unsafe-eval' data: https://avatars.githubusercontent.com https://github.com https://kit.fontawesome.com/ https://ka-f.fontawesome.com/ https://fonts.googleapis.com/ https://fonts.gstatic.com/ https://www.youtube.com/ https://www.google-analytics.com/ https://www.googletagmanager.com/ https://*.algolia.net/;",
       },
     },
     {
       // Load font awesome icons
       tagName: 'script',
       attributes: {
+        defer: 'true',
         src: 'https://kit.fontawesome.com/17a35e44e3.js',
         crossorigin: 'anonymous',
       },
@@ -84,6 +85,15 @@ const config = {
          * Path to data on filesystem relative to site dir.
          */
         path: './releases',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'quickstarts',
+        path: 'quickstarts',
+        routeBasePath: 'quickstarts',
+        sidebarPath: './sidebars.js',
       },
     ],
   ],
@@ -158,7 +168,7 @@ const config = {
         title: 'Developers',
         navItems: [
           {
-            href: 'https://quickstarts.teradata.com/',
+            href: `${baseUrl}/quickstarts/business-intelligence/create-stunning-visualizations-in-power-bi-using-data-from-teradata-vantage/`,
             label: 'Getting started',
           },
           {
