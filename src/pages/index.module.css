@@ -2,14 +2,19 @@
  * CSS files with the .module.css suffix will be treated as CSS modules
  * and scoped locally.
  */
-
+.imgBanner{
+  width: 498px !important;
+}
 .heroBanner {
   padding: 6rem 0 2rem;
-  text-align: center;
+/*  text-align: center;*/
   position: relative;
   background: none;
   color: #333A3E;
   z-index: 1;
+}
+.ali{
+  text-align: left;
 }
 
 .heroBanner h1 {
@@ -136,7 +141,7 @@
   }
 
   .heroBanner {
-    padding: 3.5rem 0 4rem;
+    padding: 3.5rem 0 4rem 0;
   }
 
   .buttons {
@@ -147,5 +152,34 @@
 @media (min-width: 1440px) {
   .container {
     max-width: 1440px;
+  }
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .heroBlur {
+    background: transparent;
+  }
+}
+
+/* Default for large screens */
+.imgW {
+  max-width: 398px;
+}
+
+/* Tablet view */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .imgW {
+      max-width: 248px;
+      margin-left: 120px;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .imgW {
+    /*
+      max-width: 243px;
+      */width: 100%;
   }
 }
