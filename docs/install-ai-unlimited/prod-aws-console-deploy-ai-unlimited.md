@@ -166,7 +166,7 @@ If the container, pod, or node crashes or terminates, and the manager's configur
 ## Review and create the stack
 
 1. Review the template settings. 
-2. Select the check box to acknowledge that the template will create IAM resources. 
+2. Select the checkbox to acknowledge that the template will create IAM resources. 
 3. Select **Submit** to deploy the stack.<br />
 On the **Events** tab, you can monitor progress. When the status of all the resources is `CREATE_COMPLETE`, the manager is ready. 
 
